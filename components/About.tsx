@@ -46,7 +46,7 @@ export default function About() {
           {/* Portal / School Image */}
           <div className="flex justify-center">
             <img
-              src="/Primary/bs1.jpg"
+              src="/images/bs1.jpg" 
               alt="Biskay School Portal"
               className="w-full max-w-md h-80 object-cover rounded-lg shadow-lg"
             />
