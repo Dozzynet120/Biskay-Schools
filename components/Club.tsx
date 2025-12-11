@@ -60,7 +60,7 @@ export default function Clubs() {
         muted
         playsInline
       >
-        <source src="/images/bis.mp4" type="video/mp4" />
+        <source src="/videos/bis.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay tint */}

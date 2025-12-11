@@ -140,8 +140,8 @@ export default function GalleryPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-              <img src="/primary/lab.webp" className="rounded-lg h-48 w-full object-cover" />
-              <h3 className="mt-4 text-lg font-semibold">Science Labs</h3>
+              <img src="/primary/pri1.jpg" className="rounded-lg h-48 w-full object-cover" />
+              <h3 className="mt-4 text-lg font-semibold">School Library</h3>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-6 text-center">

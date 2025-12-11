@@ -4,8 +4,8 @@ import useEmblaCarousel from "embla-carousel-react";
 
 // Video files to display
 const videos = [
-  "/images/bis.mp4",
-  "/images/bis2.mp4",
+  "/videos/bis.mp4",
+  "/videos/bis2.mp4",
 ];
 
 export default function Carousel() {

@@ -30,7 +30,7 @@ export default function Parent() {
         {/* Left Side Image */}
         <div className="w-full">
           <img
-            src="/images/bis.jpg"
+            src="/parents/Bis2.jpg"
             alt="Parents and students smiling"
             className="rounded-3xl shadow-xl w-full object-cover border-4 border-white"
           />
