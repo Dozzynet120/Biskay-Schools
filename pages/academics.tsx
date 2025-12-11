@@ -18,7 +18,7 @@ export default function AcademicsPage() {
           </p>
         </div>
         <img
-          src="/images/academics-hero.jpg"
+          src="/Nursery/nurs1.jpg"
           alt="Academic Programs"
           className="absolute inset-0 w-full h-full object-cover opacity-20"
         />
@@ -64,7 +64,7 @@ export default function AcademicsPage() {
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <img
-              src="/nursery/nurs1.jpg"
+              src="/Nursery/nurs1.jpg"
               alt="Nursery Class"
               className="rounded-xl shadow-lg mb-6"
             />

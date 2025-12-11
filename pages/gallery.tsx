@@ -19,7 +19,7 @@ export default function GalleryPage() {
 
       {/* Hero Section */}
       <section className="relative h-[50vh] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: "url('/Primary/pri1.jpg')" }}>
+        style={{ backgroundImage: "url('/primary/pri1.jpg')" }}>
         <div className="absolute inset-0 bg-black/40"></div>
         <h1 className="relative text-5xl md:text-6xl font-extrabold text-white text-center drop-shadow-lg">
           Our Gallery
@@ -145,12 +145,12 @@ export default function GalleryPage() {
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-              <img src="/Primary/pri2.jpg" className="rounded-lg h-48 w-full object-cover" />
+              <img src="/primary/pri2.jpg" className="rounded-lg h-48 w-full object-cover" />
               <h3 className="mt-4 text-lg font-semibold">ICT Centre</h3>
             </div>
 
             <div className="bg-white rounded-xl shadow-lg p-6 text-center">
-              <img src="/Primary/play.jpeg" className="rounded-lg h-48 w-full object-cover" />
+              <img src="/primary/play.jpeg" className="rounded-lg h-48 w-full object-cover" />
               <h3 className="mt-4 text-lg font-semibold">Sports Arena</h3>
             </div>
           </div>
