@@ -1,16 +1,18 @@
 "use client";
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
 // Video files to display
 const videos = [
-  "/videos/bis.mp4",
-  "/videos/bis2.mp4",
+  "/videos/bis-new.mp4",
+  "/videos/bis2-new.mp4",
 ];
 
 export default function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const videoRefs = useRef<HTMLVideoElement[]>([]);
 
+  // Scroll carousel
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
   }, [emblaApi]);
@@ -19,12 +21,23 @@ export default function Carousel() {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
+  // Auto-scroll every 8 seconds
   useEffect(() => {
     if (!emblaApi) return;
-
-    const interval = setInterval(() => emblaApi.scrollNext(), 8000); // switch every 8 sec
+    const interval = setInterval(() => emblaApi.scrollNext(), 8000);
     return () => clearInterval(interval);
   }, [emblaApi]);
+
+  // Attempt to play all videos on mount
+  useEffect(() => {
+    videoRefs.current.forEach((video) => {
+      if (video) {
+        video.play().catch(() => {
+          console.log("Autoplay blocked, muted is required for autoplay.");
+        });
+      }
+    });
+  }, []);
 
   return (
     <div className="relative w-full overflow-hidden">
@@ -34,11 +47,15 @@ export default function Carousel() {
           {videos.map((src, i) => (
             <div className="embla__slide flex-[0_0_100%]" key={i}>
               <video
+                ref={(el) => {
+                  if (el) videoRefs.current[i] = el;
+                }}
                 src={src}
                 autoPlay
                 loop
                 muted
                 playsInline
+                preload="auto"
                 className="w-full h-[120vh] md:h-[100vh] object-cover"
               />
             </div>
